@@ -37,16 +37,13 @@ int error = 0;
 void processRecvBuff(const char *receive)
 {
 	int countNumber = 0, countAlphabet = 0;
-	char number[MAX_LENGTH];
-	char alphabet[MAX_LENGTH];
-
 	for (size_t i = 0; i < strlen(receive); i++)
 	{
 		char currentChar = receive[i];
 
 		if (isdigit(currentChar))
 		{
-			if (countNumber < MAX_LENGTH - 1)
+			if (countNumber < BUFF_SIZE - 1)
 			{
 				number[countNumber++] = currentChar;
 			}
@@ -56,7 +53,7 @@ void processRecvBuff(const char *receive)
 		}
 		else if (isalpha(currentChar))
 		{
-			if (countAlphabet < MAX_LENGTH - 1)
+			if (countAlphabet < BUFF_SIZE - 1)
 			{
 				alphabet[countAlphabet++] = currentChar;
 			}

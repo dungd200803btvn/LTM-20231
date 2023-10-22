@@ -1,4 +1,4 @@
 hust hust123 0  
 soict soict123 1  
-hespi hespi123 0  
+hespi hespi123 1 
 lcd lcd123 2  
